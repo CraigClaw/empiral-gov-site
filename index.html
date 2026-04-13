@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Empiral, LLC | Federal Procurement and Supply Support</title>
+  <meta name="description" content="Empiral, LLC provides responsive sourcing, procurement support, and commercial product supply for federal, defense, and civilian buyers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f1e33'/><text x='50' y='68' font-size='55' font-weight='800' fill='white' text-anchor='middle' font-family='Inter,system-ui,sans-serif'>E</text></svg>" />
+  <meta property="og:title" content="Empiral, LLC — Federal Procurement and Supply Support" />
+  <meta property="og:description" content="Responsive sourcing and commercial product support for government buyers. SAM-registered small business." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://empiralgov.com" />
+  <meta name="twitter:card" content="summary" />
+  <style>
+    :root {
+      --navy: #0f1e33;
+      --navy-2: #173050;
+      --slate: #5b6b7f;
+      --ink: #142132;
+      --line: #d8e0ea;
+      --soft: #f4f7fb;
+      --white: #ffffff;
+      --blue: #2f6fed;
+      --blue-2: #eaf2ff;
+      --success: #0f7b6c;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .section { padding: 72px 0; }
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--blue-2);
+      color: var(--navy-2);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: transform .15s ease, background-color .15s ease, color .15s ease, border-color .15s ease;
+      border: 1px solid transparent;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--blue); color: var(--white); }
+    .btn-secondary { background: transparent; color: var(--navy); border-color: rgba(255,255,255,.28); }
+    .btn-outline { background: var(--white); color: var(--navy); border-color: var(--line); }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-wrap {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      color: var(--navy);
+    }
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+    }
+    .nav-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      font: inherit;
+      padding: 8px;
+      color: var(--navy);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: var(--slate);
+      font-weight: 600;
+    }
+    .hero {
+      background:
+        radial-gradient(circle at top right, rgba(47,111,237,.18), transparent 32%),
+        linear-gradient(180deg, #0f1e33 0%, #142843 100%);
+      color: var(--white);
+      padding: 96px 0 78px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 40px;
+      align-items: center;
+    }
+    h1 {
+      margin: 16px 0 18px;
+      font-size: clamp(36px, 6vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+    .hero p.lead {
+      margin: 0 0 28px;
+      font-size: 18px;
+      color: rgba(255,255,255,.82);
+      max-width: 720px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .badge {
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      color: rgba(255,255,255,.9);
+      font-size: 14px;
+    }
+    .hero-card {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 18px 45px rgba(0,0,0,.18);
+    }
+    .hero-card h3 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 20px;
+    }
+    .hero-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .hero-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      color: rgba(255,255,255,.88);
+    }
+    .hero-list li:last-child { border-bottom: 0; }
+    h2 {
+      margin: 14px 0 12px;
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--navy);
+    }
+    .section-head { max-width: 760px; margin-bottom: 28px; }
+    .section-head p { margin: 0; color: var(--slate); font-size: 17px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(15,30,51,.05);
+    }
+    .card h3 { margin-top: 0; margin-bottom: 8px; font-size: 20px; color: var(--navy); }
+    .card p { margin: 0; color: var(--slate); }
+    .metric-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .metric {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+    }
+    .metric strong {
+      display: block;
+      color: var(--navy);
+      font-size: 26px;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+    .metric span { color: var(--slate); font-size: 14px; }
+    .credentials {
+      background: var(--soft);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .cred-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    .cred-panel {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(15,30,51,.05);
+    }
+    .cred-list { list-style: none; padding: 0; margin: 0; }
+    .cred-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .cred-list li:last-child { border-bottom: 0; }
+    .cred-label { color: var(--slate); font-weight: 600; }
+    .cred-value { color: var(--navy); font-weight: 700; text-align: right; }
+    .bullet-list { margin: 16px 0 0; padding-left: 20px; color: var(--slate); }
+    .bullet-list li + li { margin-top: 8px; }
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+    .step {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      background: var(--white);
+    }
+    .step-num {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: var(--navy);
+      color: var(--white);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .cta-band {
+      background: linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+      color: var(--white);
+      border-radius: 24px;
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 20px;
+      align-items: center;
+      box-shadow: 0 18px 45px rgba(15,30,51,.18);
+    }
+    .cta-band h2, .cta-band h3 { color: var(--white); }
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 22px;
+      align-items: start;
+    }
+    .contact-points {
+      display: grid;
+      gap: 12px;
+    }
+    .contact-point {
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--soft);
+    }
+    .contact-point strong { display: block; color: var(--navy); }
+    .footer {
+      padding: 28px 0 50px;
+      color: var(--slate);
+      font-size: 14px;
+    }
+    .small { font-size: 14px; color: var(--slate); }
+    @media (max-width: 980px) {
+      .hero-grid, .cred-grid, .contact-grid, .cta-band { grid-template-columns: 1fr; }
+      .grid-3, .process, .metric-strip { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 760px) {
+      .nav-toggle { display: inline-flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--line);
+        padding: 14px 16px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links.open { display: flex; }
+      .section { padding: 56px 0; }
+      .grid-2, .grid-3, .process, .metric-strip { grid-template-columns: 1fr; }
+      .hero { padding-top: 72px; }
+      .cta-band { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Empiral home">
+        <span class="brand-mark">E</span>
+        <span>Empiral, LLC</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" id="navToggle">Menu</button>
+      <nav class="nav-links" id="site-nav" aria-label="Primary navigation">
+        <a href="#capabilities">Capabilities</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+        <a href="capability-statement.html" class="btn btn-outline">Capability Statement</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Federal procurement and supply support</span>
+          <h1>Responsive sourcing and commercial product support for government buyers.</h1>
+          <p class="lead">
+            Empiral, LLC supports federal, defense, and civilian buyers with disciplined sourcing, procurement support, and commercial product supply for fast-turn operational requirements.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:bids@empiralgov.com?subject=Request%20for%20Quote">Request a Quote</a>
+            <a class="btn btn-secondary" href="capability-statement.html">View Capability Statement</a>
+          </div>
+          <div class="hero-badges" aria-label="Key information">
+            <span class="badge">Active SAM registration</span>
+            <span class="badge">Government Purchase Card accepted</span>
+            <span class="badge">Same-day quote turnaround</span>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="At a glance">
+          <h3>At a glance</h3>
+          <ul class="hero-list">
+            <li>Commercial product sourcing and procurement support</li>
+            <li>Buyer-focused communication and fast quote turnaround</li>
+            <li>Office, IT, janitorial, safety, and hardware / MRO categories</li>
+            <li>Structured opportunity tracking and quote management</li>
+            <li>Downloadable capability statement available directly</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="capabilities">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Core capabilities</span>
+          <h2>Built for commercial item buys and fast-turn RFQ response.</h2>
+          <p>
+            Empiral supports straightforward product requirements: categories that can be sourced quickly, priced clearly, and delivered with clean communication.
+          </p>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Commercial product sourcing</h3>
+            <p>Responsive sourcing for office supplies, IT peripherals, janitorial and cleaning supplies, PPE and safety items, and hardware / MRO categories.</p>
+          </article>
+          <article class="card">
+            <h3>Supplier outreach and quote collection</h3>
+            <p>Structured supplier contact, pricing follow-up, comparison tracking, and reviewed quote preparation.</p>
+          </article>
+          <article class="card">
+            <h3>Opportunity tracking and quote management</h3>
+            <p>Structured opportunity pipeline with organized documentation and submission-ready quote preparation for every solicitation.</p>
+          </article>
+          <article class="card">
+            <h3>Micro-purchase readiness</h3>
+            <p>Support for Government Purchase Card transactions, along with standard agency buying workflows including ACH / EFT and WAWF invoicing.</p>
+          </article>
+        </div>
+        <div class="metric-strip" aria-label="Our approach">
+          <div class="metric"><strong>Products first</strong><span>Product-heavy, lower-complexity opportunities for faster wins.</span></div>
+          <div class="metric"><strong>Fast response</strong><span>Same-day review and draft turnaround on incoming RFQs.</span></div>
+          <div class="metric"><strong>Reviewed quotes</strong><span>Every quote reviewed and approved before submission.</span></div>
+          <div class="metric"><strong>Credibility</strong><span>SAM-registered, active capability statement, verified business identity.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section credentials" id="credentials">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Company credentials</span>
+          <h2>Verified, current, and ready for buyer review.</h2>
+          <p>
+            All credentials match the active SAM.gov registration for Empiral, LLC.
+          </p>
+        </div>
+        <div class="cred-grid">
+          <div class="cred-panel">
+            <h3>Company information</h3>
+            <ul class="cred-list">
+              <li><span class="cred-label">Legal name</span><span class="cred-value">Empiral, LLC</span></li>
+              <li><span class="cred-label">Website</span><span class="cred-value">empiralgov.com</span></li>
+              <li><span class="cred-label">UEI</span><span class="cred-value">ZQHJPHF88SN5</span></li>
+              <li><span class="cred-label">CAGE</span><span class="cred-value">9K3X0</span></li>
+              <li><span class="cred-label">Business type</span><span class="cred-value">Small Business</span></li>
+              <li><span class="cred-label">Primary NAICS</span><span class="cred-value">453210, 423430, 423610</span></li>
+              <li><span class="cred-label">Contact</span><span class="cred-value">Procurement Team — bids@empiralgov.com</span></li>
+            </ul>
+          </div>
+          <div class="cred-panel">
+            <h3>Payment and ordering</h3>
+            <ul class="bullet-list">
+              <li>Government Purchase Card (GPC) transactions accepted.</li>
+              <li>ACH / EFT and WAWF invoicing supported.</li>
+              <li>Agency-approved invoicing and payment workflows.</li>
+              <li>Structured internal review before quote release.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How we support agencies</span>
+          <h2>A straightforward operating model for product-focused opportunities.</h2>
+          <p>
+            Empiral's process is built around disciplined intake, clear supplier outreach, and reviewed quote preparation.
+          </p>
+        </div>
+        <div class="process">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Review</h3>
+            <p>We review the requirement, buyer information, timing, and basic fit before proceeding.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Source</h3>
+            <p>We identify potential suppliers and gather pricing, lead time, and availability information.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Draft</h3>
+            <p>We prepare a clean quote draft and supporting documentation for review.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <h3>Respond</h3>
+            <p>After approval, we finalize the quote and respond through the required official channel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <span class="eyebrow" style="background: rgba(255,255,255,.12); color: #fff;">Capability statement</span>
+            <h2>Need a one-page overview for your file?</h2>
+            <p style="color: rgba(255,255,255,.84); margin: 0;">
+              Download our capability statement directly or request a copy by email.
+            </p>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-start;">
+            <a class="btn btn-primary" href="capability-statement.html">View capability statement</a>
+            <a class="btn btn-secondary" href="mailto:bids@empiralgov.com?subject=Capability%20Statement%20Request">Request by email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="section-head">
+            <span class="eyebrow">Contact</span>
+            <h2>For RFQs, product requests, and procurement support.</h2>
+            <p>
+              Reach out directly — we respond to all inquiries within one business day.
+            </p>
+          </div>
+          <div class="contact-points">
+            <div class="contact-point">
+              <strong>Procurement Team</strong>
+              <div>bids@empiralgov.com</div>
+            </div>
+            <div class="contact-point">
+              <strong>Primary focus categories</strong>
+              <div>Office supplies • IT peripherals • Janitorial • PPE / safety • Hardware / MRO</div>
+            </div>
+            <div class="contact-point">
+              <strong>Phone</strong>
+              <div>727-364-2797</div>
+            </div>
+            <div class="contact-point">
+              <strong>Location</strong>
+              <div>5900 Balcones Dr., Ste. 100, Austin, TX 78731</div>
+            </div>
+          </div>
+        </div>
+        <aside class="contact-card">
+          <h3 style="margin-top:0;">Quick actions</h3>
+          <div style="margin-top: 16px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="btn btn-outline" href="mailto:bids@empiralgov.com?subject=Request%20for%20Quote">Request a Quote</a>
+            <a class="btn btn-outline" href="capability-statement.html">Capability Statement</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>&copy; 2025 Empiral, LLC. All rights reserved.</div>
+      <div class="small">Federal procurement and supply support • empiralgov.com • 727-364-2797 • 5900 Balcones Dr., Ste. 100, Austin, TX 78731.</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById('navToggle');
+      var nav = document.getElementById('site-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      Array.prototype.forEach.call(nav.querySelectorAll('a'), function (link) {
+        link.addEventListener('click', function () {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }());
+  </script>
+</body>
+</html>
